@@ -15,8 +15,8 @@ const highlights = [
   },
   {
     icon: Terminal,
-    title: "Full Stack Development",
-    description: "Experience with React, Node.js, Python, and modern web technologies for building applications.",
+    title: "Front End Development",
+    description: "Experience with HTML, CSS, JavaScript, React, and modern web technologies for building applications.",
   },
 ];
 

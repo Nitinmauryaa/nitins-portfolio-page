@@ -16,7 +16,7 @@ const educationData = [
     degree: "Class XII (Senior Secondary)",
     location: "Barabanki, UP",
     period: "2024",
-    grade: "92.6%",
+    grade: "81%",
     current: false,
   },
   {

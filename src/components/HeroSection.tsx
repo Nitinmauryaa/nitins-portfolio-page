@@ -29,7 +29,7 @@ const HeroSection = () => {
               className="mb-6"
             >
               <span className="inline-block px-4 py-1.5 text-xs font-mono font-medium rounded-full border border-primary/40 text-primary bg-primary/5">
-                Competitive Programmer
+                Software Developer
               </span>
             </motion.div>
 
@@ -51,7 +51,7 @@ const HeroSection = () => {
               transition={{ duration: 0.5, delay: 0.25 }}
               className="text-lg text-muted-foreground max-w-lg mb-8 leading-relaxed"
             >
-              Passionate Developer | Competitive Programmer | Open Source Enthusiast
+              Software Engineer | Front End Development | Machine Learning | DSA
             </motion.p>
 
             {/* Stats */}
@@ -89,7 +89,7 @@ const HeroSection = () => {
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-primary text-primary text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300"
               >
                 <FileText size={16} />
-                View CV
+                View Resume
               </a>
               <a
                 href="#contact"
