@@ -7,10 +7,12 @@ import CodingStatsSection from "@/components/CodingStatsSection";
 import EducationSection from "@/components/EducationSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import CustomCursor from "@/components/CustomCursor";
 
 const Index = () => {
   return (
     <main className="min-h-screen bg-background">
+      <CustomCursor />
       <Navbar />
       <HeroSection />
       <AboutSection />

@@ -9,12 +9,13 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1280px",
       },
     },
     extend: {
       fontFamily: {
-        sans: ["Space Grotesk", "sans-serif"],
+        sans: ["Inter", "sans-serif"],
+        display: ["Outfit", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
       },
       colors: {
@@ -51,13 +52,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        glow: {
-          primary: "hsl(var(--glow-primary))",
-          secondary: "hsl(var(--glow-secondary))",
-        },
-        surface: {
-          glass: "hsl(var(--surface-glass))",
-        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -83,20 +77,10 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "typing": {
-          from: { width: "0" },
-          to: { width: "100%" },
-        },
-        "blink": {
-          "0%, 100%": { borderColor: "transparent" },
-          "50%": { borderColor: "hsl(var(--primary))" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "typing": "typing 3s steps(30) forwards",
-        "blink": "blink 1s step-end infinite",
       },
     },
   },
