@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter, Code2, FileText, ArrowDown } from "lucide-react";
-import avatar from "@/assets/avatar.jpg";
+import avatar from "@/assets/avatar.png";
 
 const socialLinks = [
   { icon: Twitter, href: "https://x.com/nitinmauryaa_", label: "Twitter" },
