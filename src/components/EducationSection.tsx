@@ -34,71 +34,71 @@ const EducationSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="education" className="py-24 relative" ref={ref}>
+    <section id="education" className="py-28 relative" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
+          className="mb-14"
         >
-          <div className="flex items-center gap-3 mb-12">
-            <span className="font-mono text-primary text-sm">05.</span>
-            <h2 className="text-3xl md:text-4xl font-bold">Education</h2>
-            <div className="h-px flex-1 bg-border max-w-xs" />
-          </div>
-
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-6 md:left-8 top-0 bottom-0 w-px bg-border" />
-
-            <div className="space-y-8">
-              {educationData.map((edu, idx) => (
-                <motion.div
-                  key={edu.institution}
-                  initial={{ opacity: 0, x: -30 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ delay: idx * 0.2, duration: 0.5 }}
-                  className="relative pl-16 md:pl-20"
-                >
-                  {/* Timeline dot */}
-                  <div
-                    className={`absolute left-4 md:left-6 top-1 w-4 h-4 rounded-full border-2 ${
-                      edu.current
-                        ? "border-primary bg-primary animate-pulse-glow"
-                        : "border-muted-foreground bg-background"
-                    }`}
-                  />
-
-                  <div className="glass-card rounded-xl p-6 hover:border-primary/30 transition-colors duration-300">
-                    <div className="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-2">
-                      <h3 className="text-lg font-semibold text-foreground flex items-center gap-2">
-                        <GraduationCap size={18} className="text-primary" />
-                        {edu.institution}
-                      </h3>
-                      {edu.current && (
-                        <span className="text-xs font-mono px-2 py-1 rounded-full bg-primary/10 text-primary border border-primary/30 w-fit">
-                          Current
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-sm text-muted-foreground mb-3">{edu.degree}</p>
-                    <div className="flex flex-wrap gap-4 text-xs text-muted-foreground">
-                      <span className="flex items-center gap-1">
-                        <Calendar size={12} className="text-primary" />
-                        {edu.period}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <MapPin size={12} className="text-primary" />
-                        {edu.location}
-                      </span>
-                      <span className="font-mono text-primary font-semibold">{edu.grade}</span>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+          <span className="text-sm font-mono text-primary mb-3 block">Background</span>
+          <h2 className="text-4xl md:text-5xl font-display font-bold">
+            Education
+          </h2>
         </motion.div>
+
+        <div className="relative">
+          {/* Timeline line */}
+          <div className="absolute left-5 top-0 bottom-0 w-px bg-border" />
+
+          <div className="space-y-8">
+            {educationData.map((edu, idx) => (
+              <motion.div
+                key={edu.institution}
+                initial={{ opacity: 0, x: -20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ delay: idx * 0.15, duration: 0.5 }}
+                className="relative pl-14"
+              >
+                {/* Timeline dot */}
+                <div
+                  className={`absolute left-3.5 top-6 w-3 h-3 rounded-full border-2 ${
+                    edu.current
+                      ? "border-primary bg-primary/30 animate-pulse-glow"
+                      : "border-muted-foreground/40 bg-background"
+                  }`}
+                />
+
+                <div className="glass-card rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 group">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
+                    <h3 className="text-lg font-display font-semibold text-foreground flex items-center gap-2 group-hover:text-primary transition-colors">
+                      <GraduationCap size={18} className="text-primary" />
+                      {edu.institution}
+                    </h3>
+                    {edu.current && (
+                      <span className="text-xs font-mono px-2.5 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 w-fit">
+                        Current
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">{edu.degree}</p>
+                  <div className="flex flex-wrap gap-4 text-xs text-muted-foreground">
+                    <span className="flex items-center gap-1.5">
+                      <Calendar size={12} className="text-primary" />
+                      {edu.period}
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <MapPin size={12} className="text-primary" />
+                      {edu.location}
+                    </span>
+                    <span className="font-mono text-primary font-semibold">{edu.grade}</span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

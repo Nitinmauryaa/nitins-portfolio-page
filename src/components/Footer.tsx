@@ -2,16 +2,15 @@ import { Github, Linkedin, Twitter, Code2, Heart } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="py-8 border-t border-border">
+    <footer className="py-10 border-t border-border">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="font-mono text-sm text-muted-foreground">
-            <span className="text-primary">&lt;</span>
-            Designed & Built by Nitin Maurya
-            <span className="text-primary"> /&gt;</span>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="font-display text-sm text-muted-foreground">
+            Designed & Built by{" "}
+            <span className="text-foreground font-medium">Nitin Maurya</span>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-5">
             {[
               { icon: Github, href: "https://github.com/Nitinmauryaa" },
               { icon: Linkedin, href: "https://www.linkedin.com/in/nitin-maurya-53b347328/" },
@@ -30,7 +29,7 @@ const Footer = () => {
             ))}
           </div>
 
-          <div className="text-xs text-muted-foreground flex items-center gap-1">
+          <div className="text-xs text-muted-foreground flex items-center gap-1.5">
             Made with <Heart size={12} className="text-primary" /> in India
           </div>
         </div>
